@@ -390,12 +390,12 @@ export default function EpaycoAgregadorLanding() {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduced) return undefined;
     const ctx = gsap.context(() => {
-      gsap.from(".hero-word", { opacity: 0, y: 30, duration: 0.72, ease: "power3.out", stagger: 0.035 });
-      gsap.from(".hero-soft", { opacity: 0, y: 18, duration: 0.75, delay: 0.2, ease: "power3.out", stagger: 0.08 });
+      gsap.from(".hero-word", { y: 24, duration: 0.62, ease: "power3.out", stagger: 0.025, clearProps: "transform" });
+      gsap.from(".hero-soft", { y: 14, duration: 0.62, delay: 0.08, ease: "power3.out", stagger: 0.05, clearProps: "transform" });
       gsap.utils.toArray<HTMLElement>(".section-animate").forEach((section) => {
         const items = section.querySelectorAll<HTMLElement>(".rise");
         if (!items.length) return;
-        gsap.fromTo(items, { opacity: 0.001, y: 34 }, { opacity: 1, y: 0, duration: 0.72, ease: "power3.out", stagger: 0.055, clearProps: "transform,opacity,visibility", scrollTrigger: { trigger: section, start: "top 88%", once: true } });
+        gsap.fromTo(items, { y: 24 }, { y: 0, duration: 0.62, ease: "power3.out", stagger: 0.045, clearProps: "transform", scrollTrigger: { trigger: section, start: "top 88%", once: true } });
       });
       requestAnimationFrame(() => ScrollTrigger.refresh());
     }, rootRef);

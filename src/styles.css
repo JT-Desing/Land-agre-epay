@@ -35,3 +35,15 @@ button,
 a {
   -webkit-tap-highlight-color: transparent;
 }
+
+.hero-word,
+.hero-soft,
+.rise,
+.trust-title-word,
+.trust-card,
+.commerce-title-word,
+.commerce-wide-bullet,
+.commerce-wide-panel,
+.commerce-flow-chip {
+  opacity: 1 !important;
+}

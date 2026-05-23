@@ -47,3 +47,7 @@ a {
 .commerce-flow-chip {
   opacity: 1 !important;
 }
+
+[style*="rotateZ(-1.5deg)"] {
+  opacity: 1 !important;
+}
